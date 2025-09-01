@@ -1,0 +1,476 @@
+/* 
+
+    Nome: Pagina Sandy Cavalcanti - CSS Global
+    Autor: Sandy Cavalcanti
+    Data criação: 25/08/2025
+    Descrição: CSS externo para a página pessoal de Sandy Cavalcanti
+
+ */
+ 
+/* Fontes Personalizadas */
+@font-face {
+    font-family: 'MonopackFont';
+    src: url(../font/MonopackRegular-DYRp3.ttf);
+}
+/* Animação de girar 3D */
+@keyframes girar3d {
+    0%   { transform: rotateX(0deg) rotateY(0deg); }
+    25%  { transform: rotateX(10deg) rotateY(10deg); }
+    50%  { transform: rotateX(0deg) rotateY(20deg); }
+    75%  { transform: rotateX(-10deg) rotateY(10deg); }
+    100% { transform: rotateX(0deg) rotateY(0deg); }
+}
+
+/* Reseta estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000000;
+}
+
+
+
+/* Navbar fixa que acompanha o scroll */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0.5%;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+}
+/* A barrinha vermelha de baixo da nav */
+nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #7f1d23, #000000, #7f1d23);
+    background-size: 300% 100%;
+    animation: borderGradient 5s linear infinite;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+nav img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+nav img:hover {
+    transform: scale(1.2);
+}
+nav a:hover {
+    transform: scale(1.1);
+    color: #900913;
+}
+
+
+
+/* Cada seção ocupa a tela toda */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+/* Primeira Seção: HOME */
+
+.home {
+    background: #000000;
+    position: relative;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Foto */
+.home img {
+    border-radius: 50%;
+    border: solid 5px #9B121C;
+    animation: girar3d 4s ease-in-out infinite;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 20px #89363C;
+}
+h2{
+    font-family: 'MonopackFont', cursive;
+    font-size: 2rem;
+    color: #968282;
+}
+/* Botão Projetos */
+.btnProjetos{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    border: #900913 solid 3px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+    color: #89363C;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+.btnProjetos:hover {
+    background: #900913;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+
+
+/* Segunda Seção: SOBRE */
+
+.sobre {
+    background: #76222A;
+    height: 60vh;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 3px hsl(0, 0%, 100%);
+    border-top: solid 3px hsl(0, 0%, 100%);
+}
+.sobre p{
+    font-size: 1.2rem;
+    margin: 5%;
+    text-align: justify;
+    color: #D9D9D9;
+}
+.sobre h2{
+    position: relative;
+    transition: all 0.3s ease;
+    margin-left: 2%;
+}
+.sobre h2:hover {
+    transform: scale(1.1);
+}
+.resumo{
+    position: relative;
+    flex: 1;
+}
+.hobbies{
+    padding-left: 5%;
+    border-left: solid 3px hsl(0, 0%, 100%);
+    position: relative;
+    flex: 0.2;
+    margin: 5%;
+}
+.hobbies ul{
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    margin: 5%;
+    padding-left: 10%;
+    color: #D9D9D9;
+}
+
+
+
+/* Terceira Seção: FORMAÇÃO */
+
+.formacao {
+    background: #000000;
+    justify-content: space-around;
+    flex-direction: row;
+    display: flex;
+}
+.lado{
+    position: relative;
+    flex: 1;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Container para o GIF animado */
+.gif-container {
+    display: flex;
+    width: 100%;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.gif-animado {
+    width: 50%;
+    transition: all 0.3s ease;
+}
+.gif-animado:hover {
+    transform: scale(1.1);
+}
+/* Ícones */
+.icons{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3%;
+}
+.icons img{
+    width: 6%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+.icons img:hover {
+    transform: scale(1.1);
+}
+.formacao h2{
+    color: #9B121C;
+    margin-left: 2%;
+}
+.conteudo{
+    padding: 5%;
+    padding-top: 1%;
+}
+.conteudo p{
+    font-size: 40%;
+    margin: 2%;
+    text-align: justify;
+    color: #D9D9D9;
+}
+.conteudo h3{
+    font-size: 50%;
+    text-align: justify;
+    color: #D9D9D9;
+}
+.conteudo h6{
+    font-size: 30%;
+    text-align: justify;
+    color: #D9D9D9;
+}
+
+
+
+/* Quarta Seção: PROJETOS */
+
+.projetos{
+    background: #76222A;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    font-family: "Georgia", serif;
+    display: flex;
+    border-bottom: solid 3px hsl(0, 0%, 100%);
+    border-top: solid 3px hsl(0, 0%, 100%);
+}
+.projetos-lista {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.projetos h2 {    
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d48c8f;
+    padding-top: 2%;
+    margin-bottom: 0px;
+    position: relative;
+    font-family: "Georgia", serif;
+    text-align: center;
+}
+.projetos h2::before,
+.projetos h2::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 2px;
+    background: #d48c8f;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+.projeto-item {
+    background: #d48c8f;
+    width: 180px;
+    color: black;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 5px #000000;
+    transition: all 0.3s ease;
+}
+.projeto-item:hover{
+    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    background-color: #f7bbbc;
+    box-shadow: 0 5px 10px #000000;
+    color: white;
+}
+.projeto-item:hover a{
+    color: #76222A;
+    font-size: 24px;
+}
+.projeto-item a:hover{
+    color: white;
+}
+.projeto-item img {
+    width: 60px;
+    margin-bottom: 5px;
+}
+.projeto-item a {
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.ano {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+
+/* Quinta Seção: CONTATO */
+
+.contato{
+    background-color: #000000;
+    height: 60vh;
+}
+.campos-form {
+    margin-bottom: 1rem;
+    height: 70%;
+    display: flex;
+    padding: 5%;
+    flex-direction: column;
+    gap: 1rem;
+    border: solid 3px #9B121C;
+    border-radius: 20px;
+}
+.campos-form input,
+.campos-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.campos-form input:hover,
+.campos-form textarea:hover {
+    transform: scale(1.05);
+}
+form button {
+    padding: 0.7rem;
+    background-color: #9B121C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-self: flex-end;
+    font-size: 1rem;
+    transition: all 0.1s ease;
+}
+form button:hover {
+    background-color: transparent;
+    border: solid 3px #9B121C;
+}
+.contato p{
+    font-size: 1.2rem;
+    margin: 5%;
+    text-align: justify;
+    color: #D9D9D9;
+}
+.contato h2{
+    position: relative;
+    margin-left: 2%;
+}
+
+
+
+/* Telas com menos de 1200px */
+@media (max-width: 1200px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    nav img {
+        width: 20px;
+        height: 20px;
+    }
+    section {
+        font-size: 1.2rem;
+    }
+    .home img {
+        width: 0%;
+        height: auto;
+        border: none;
+    }    
+    .sobre p{
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 1.1rem;
+    }
+    .sobre ul{
+        font-size: 0.8rem;
+    }
+    .projetos{
+        height: 70vh;
+    }
+    .projetos h2 {
+        font-size: 1rem;
+    }  
+
+    .gif-animado {
+        width: 50%;
+    }
+    .icons img {
+        width: 7%;
+    }
+    .projeto-item {
+        width: 150px;
+        height: 150px;
+    }
+    .projeto-item:hover {
+        width: 170px;
+        height: 170px;
+    }
+    .campos-form {
+        padding: 2%;
+    }
+    .campos-form input,
+    .campos-form textarea {
+        width: 100%;
+        padding: 0.2rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
