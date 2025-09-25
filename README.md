@@ -7,7 +7,6 @@ Acesse online: [sandycavalcanti.vercel.app](https://sandycavalcanti.vercel.app/)
 
 ## 🖥️ Prévia
 
-(Adicione aqui prints das telas do site)
 
 ---
 
