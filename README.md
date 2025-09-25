@@ -8,8 +8,7 @@ Acesse online: [sandycavalcanti.vercel.app](https://sandycavalcanti.vercel.app/)
 ## 🖥️ Prévia
 
 <p align="center">
-  <img src="img/videoDemonstrativo.gif" width="800"/><br>
-  <em>Demonstração do site</em>
+  <img src="img/videoDemonstrativo.gif" alt="Demonstração do site" width="800"/><br>
 </p>
 
 ---
