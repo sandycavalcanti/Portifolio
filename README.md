@@ -6,7 +6,7 @@ Acesse online: [sandycavalcanti.vercel.app](https://sandycavalcanti.vercel.app/)
 ---
 
 ## 🖥️ Prévia
-
+![Demonstração do site](img/videoDemonstrativo.gif)
 
 ---
 
